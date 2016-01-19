@@ -10,8 +10,7 @@ This include follows source code
 
 Environment
 
-[JDK 8 (1.8.0_66)] (http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-
-[Payara Server 4.1.1.154 #badassfish (build 270)](http://www.payara.fish/downloads)
-
-[NetBean 8.1](http://netbeans.org/downloads/) tested on Macbook pro 13 & [CentOS 6](http://www.centos.org)
+1. [JDK 8 (1.8.0_66)] (http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+2. [Payara Server 4.1.1.154 #badassfish (build 270)](http://www.payara.fish/downloads)
+3. [NetBean 8.1](http://netbeans.org/downloads/) 
+4. Developed on Macbook pro & tested on [CentOS 6](http://www.centos.org)
