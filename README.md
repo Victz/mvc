@@ -4,7 +4,7 @@ Java EE 8 MVC (JSR-371) Demo
 
 This include follows source code
 
-1. [How to start MVC at root context](http://www.victz.com/post/fe864e1044654ad4aceb6e938898e419), as default handler and filter out static resources.
+1. [How to start MVC at root context, set as default handler and filter out static resources.](http://www.victz.com/post/fe864e1044654ad4aceb6e938898e419) 
 2. [How to set optional path param](http://www.victz.com/post/1e31aff777fc439b9ee2a83bf9c6865d)
 
 
