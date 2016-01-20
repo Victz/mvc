@@ -6,6 +6,7 @@ This include follows source code
 
 1. [Java EE 8 MVC (JSR-371) Example - How to start MVC at root context, set as default handler and filter out static resources.](http://www.victz.com/post/fe864e1044654ad4aceb6e938898e419) 
 2. [Java EE 8 MVC (JSR-371) Example - How to set optional path param](http://www.victz.com/post/1e31aff777fc439b9ee2a83bf9c6865d)
+3. [Java EE 8 MVC (JSR-371) Example - How to Set Cookie](http://www.victz.com/post/262dcc916fb143e7ab3ccf060de8fe81)
 
 
 Environment

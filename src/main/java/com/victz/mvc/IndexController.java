@@ -63,7 +63,7 @@ public class IndexController {
     @Path("signin")
     @View("signin.jsp")
     public void signin() {
-        models.put("msg", "Message from login");
+        models.put("msg", "Message for sign in page");
     }
 
     @POST
