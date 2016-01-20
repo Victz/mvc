@@ -43,8 +43,13 @@ THE SOFTWARE.
         <title>Victz MVC</title>
     </head>
     <body>        
-        <h1>Hello Content!</h1>
+        <h1>Sign In</h1>
         <p>${msg}</p>
+
+        <form role="form" method="post" action="signin"  >
+            <input type="submit" value="Sign In" />
+        </form>
+
     </body>
 </html>
 

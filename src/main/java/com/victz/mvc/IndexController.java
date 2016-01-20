@@ -23,13 +23,20 @@
  */
 package com.victz.mvc;
 
+import java.net.URI;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.mvc.Models;
+import javax.mvc.MvcContext;
 import javax.mvc.annotation.Controller;
 import javax.mvc.annotation.View;
+import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.NewCookie;
+import javax.ws.rs.core.Response;
 
 /**
  *
@@ -41,6 +48,8 @@ import javax.ws.rs.Path;
 public class IndexController {
 
     @Inject
+    MvcContext mvcContext;
+    @Inject
     Models models;
 
     @GET
@@ -51,9 +60,26 @@ public class IndexController {
     }
 
     @GET
-    @Path("content")
-    @View("content.jsp")
-    public void content() {
-        models.put("msg", "Message from Content");
+    @Path("signin")
+    @View("signin.jsp")
+    public void signin() {
+        models.put("msg", "Message from login");
+    }
+
+    @POST
+    @Path("signin")
+    public Response signin(@Context HttpServletRequest request) {
+        return Response.seeOther(URI.create(mvcContext.getContextPath() + "/posts")).cookie(new NewCookie("user", "auth token value sample",
+                (mvcContext.getContextPath() == null || mvcContext.getContextPath().isEmpty()) ? "/" : mvcContext.getContextPath(),
+                "", "The is a test cookie, expire after 30 days", 60 * 60 * 24 * 30, false, true)).build();
+    }
+
+    @GET
+    @Path("signout")
+    public Response signout(@Context HttpServletRequest request) {
+        request.getSession().invalidate();
+        return Response.seeOther(URI.create(mvcContext.getContextPath() + "/signin")).cookie(new NewCookie("user", "",
+                (mvcContext.getContextPath() == null || mvcContext.getContextPath().isEmpty()) ? "/" : mvcContext.getContextPath(),
+                "", "", 0, false, true)).build();
     }
 }

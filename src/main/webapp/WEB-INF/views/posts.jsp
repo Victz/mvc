@@ -53,6 +53,7 @@ THE SOFTWARE.
             <dt>Page No</dt>
             <dd>${postsModel.pageNo}</dd>
         </dl>
+        <a href="${mvc.basePath}/signout">Sign Out</a>
     </body>
 </html>
 
